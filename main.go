@@ -99,7 +99,7 @@ func sqliteMethod(respData HeartBeatResp) {
 		panic(err)
 	}
 
-	//err = os.Remove(DBName)
+	err = os.Remove(DBName)
 	if err != nil {
 		panic(err)
 	}
