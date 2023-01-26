@@ -13,7 +13,7 @@ If you want to run it on your own machine, you can do so by running the followin
 ```bash
 git clone
 cd wakatime-fetcher
-go run wakatime -- <your api key>
+go run wakatime <your api key>
 ```
 
 This will create a file called `wakatime.tar.gz` in the current directory. Which contains the sqlite3 database.

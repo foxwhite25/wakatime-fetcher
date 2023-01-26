@@ -26,7 +26,7 @@ jobs:
         run: go get .
 
       - name: Execute # run to add activities to db
-        run: go run wakatime -- ${{ secrets.WAKATIME_API_KEY }}
+        run: go run wakatime ${{ secrets.WAKATIME_API_KEY }}
 
       - name: Get current date
         id: date
