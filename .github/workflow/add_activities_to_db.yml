@@ -1,0 +1,45 @@
+name: add_activities_to_db
+
+on:
+  workflow_dispatch:
+#  schedule:
+#    - cron: '0 0 1 1 *' # runs every year, so sad '0 0 5 31 2 ?' is not recognized as cron
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        go-version:
+          - "1.19"
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content to github runner
+
+      - name: Setup Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: ${{ matrix.go-version }}
+
+      - name: Install dependencies
+        run: go get .
+
+      - name: Execute # run to add activities to db
+        run: go run wakatime -- ${{ secrets.WAKATIME_API_KEY }}
+
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Update activities at ${{ steps.date.outputs.date }}"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
