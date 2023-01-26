@@ -20,17 +20,17 @@ go run wakatime <你的 api key>
 
 ### Workflow
 
-如果要将其作为 workflow 运行，请先将其复制到私有存储库（或者如果您希望数据公开可用，则可以将其复制到公共存储库）。
+如果要将其作为 workflow 运行，请先将其复制到私有存储库（或者如果你希望数据公开可用，则可以将其复制到公共存储库）。
 
 #### GitHub 方式
 
-您可以在存储库的右上角单击使用此模板按钮。这将创建一个与此存储库具有相同文件的新存储库。
+你可以在存储库的右上角单击使用此模板按钮。这将创建一个与此存储库具有相同文件的新存储库。
 
 #### Git 方式
 
-您需要通过 [Github UI](https://github.com/new) 创建一个新的私有存储库。 （这里我们称之为 `private-repo`）
+你需要通过 [Github UI](https://github.com/new) 创建一个新的私有存储库。 （这里我们称之为 `private-repo`）
 
-然后，您可以运行以下命令将此存储库复制到您的私有存储库：
+然后，你可以运行以下命令将此存储库复制到你的私有存储库：
 
 ```bash
 git clone --bare https://github.com/foxwhite25/wakatime-fetcher.git
@@ -42,7 +42,7 @@ rm -rf wakatime-fetcher.git
 
 #### 设置 workflow
 
-现在您有了私有存储库，您可以根据需要修改 workflow 文件。首先克隆您的私有存储库：
+现在你有了私有存储库，你可以根据需要修改 workflow 文件。首先克隆你的私有存储库：
 
 ```bash
 git clone https://github.com/<your username>/private-repo.git
@@ -67,13 +67,13 @@ git push origin master
 
 你需要获取你的 api key。你可以在 [这里](https://wakatime.com/api-key) 找到它。
 
-获得了 api key 后，您需要将其添加到您的存储库的 secrets 中。您可以在存储库的设置中找到它。将名称设置为 `WAKATIME_API_KEY` 并将值设置为您的 api key。
+获得了 api key 后，你需要将其添加到你的存储库的 secrets 中。你可以在存储库的设置中找到它。将名称设置为 `WAKATIME_API_KEY` 并将值设置为你的 api key。
 
 现在你可以去设定启用 workflow，并启用写入权限。
 
 #### 从这个存储库拉取更新
 
-如果您想从此存储库拉取更新，您可以运行以下命令：
+如果你想从此存储库拉取更新，你可以运行以下命令：
 
 ```bash
 cd private-repo
