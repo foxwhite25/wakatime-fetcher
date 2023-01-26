@@ -1,5 +1,7 @@
 # Wakatime Fetcher
 
+[中文](README_CN.md)
+
 This is a simple script to fetch your wakatime stats yesterday and save it to a database.
 
 Currently, it only supports sqlite3, but pull requests are welcome.
@@ -79,7 +81,7 @@ git pull public master # Creates a merge commit
 git push origin master
 ```
 
-### Database
+## Database
 
 The database contains a single table called `heartbeats` with the following schema:
 
