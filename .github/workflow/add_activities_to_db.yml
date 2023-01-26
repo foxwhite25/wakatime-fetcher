@@ -2,6 +2,7 @@ name: add_activities_to_db
 
 on:
   workflow_dispatch:
+
 #  schedule:
 #    - cron: '0 0 1 1 *' # runs every year, so sad '0 0 5 31 2 ?' is not recognized as cron
 
