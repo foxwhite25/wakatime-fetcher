@@ -40,7 +40,7 @@ func main() {
 	}
 	auth := os.Args[1]
 	data := url.Values{}
-	data.Add("date", time.Now().Format("2006-01-02"))
+	data.Add("date", time.Now().AddDate(0, 0, -1).Format("2006-01-02"))
 	resp, err := requestEndPoint("GET", "users/current/heartbeats", data, auth)
 	log.Print("Requesting: ", EndPoint+"users/current/heartbeats?"+data.Encode())
 	if err != nil {
