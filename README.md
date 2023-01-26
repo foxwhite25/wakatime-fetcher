@@ -22,6 +22,12 @@ This will create a file called `wakatime.tar.gz` in the current directory. Which
 
 If you want to run it as a workflow, first you need to fork this to a private repository (or if you want your data to be publicly available, you can fork it to a public repository).
 
+#### The GitHub way
+
+You can click the use this template button on the top right of the repository. This will create a new repository with the same files as this one.
+
+#### The Git way
+
 What you need to do is create a new private repo via the [Github UI](https://github.com/new). (Lets call it `private-repo` here)
 
 Then you can run these command to fork this repo to your private repo:
@@ -34,6 +40,7 @@ cd ..
 rm -rf wakatime-fetcher.git
 ```
 
+#### Setting up the workflow
 Now that you have your private repo, you can modify the workflow file to your liking. Start by cloning your private repo:
 
 ```bash
