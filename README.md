@@ -68,7 +68,7 @@ You will need to get your wakatime api key. You can get it from [here](https://w
 
 When you got the key, create a new secret in your private repo called `WAKATIME_API_KEY` and set the value to your api key.
 
-Now you can go to the actions tab of your private repo and enable the workflow.
+Now you can go to the actions tab of your private repo and enable the workflow, and go to setting and enable workflow write access to the repo.
 
 #### Pull Changes From This Repo
 To pull new hotness from the public repo:

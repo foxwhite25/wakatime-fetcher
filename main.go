@@ -15,7 +15,7 @@ import (
 
 var EndPoint = "https://wakatime.com/api/v1/"
 var DBName = "wakatime.db"
-var CompressedDBName = "wakatime.db.gz"
+var CompressedDBName = "wakatime.tar.gz"
 
 func getAuthHeader(auth string) http.Header {
 	header := http.Header{}
