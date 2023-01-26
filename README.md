@@ -64,6 +64,10 @@ git commit -m "Change workflow to run on schedule"
 git push origin master
 ```
 
+You will need to get your wakatime api key. You can get it from [here](https://wakatime.com/api-key). 
+
+When you got the key, create a new secret in your private repo called `WAKATIME_API_KEY` and set the value to your api key.
+
 Now you can go to the actions tab of your private repo and enable the workflow.
 
 #### Pull Changes From This Repo
